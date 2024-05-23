@@ -42,6 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'core',
+    'league',
+    'players',
+    'schedule',
+    'stats',
+    'teams',
+    'users',
+
     'django_bootstrap5',
     'django_htmx',
     'espn_api',
@@ -59,7 +67,7 @@ MIDDLEWARE = [
     'django_htmx.middleware.HtmxMiddleware',
 ]
 
-ROOT_URLCONF = 'golf_league.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +85,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'golf_league.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
