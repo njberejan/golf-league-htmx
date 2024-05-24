@@ -2,10 +2,13 @@
 <html>
 <head>
     {% load static %}
-    <script src="{% static 'htmx.min.js' %}" defer></script>
+    <script src="{% static 'js/htmx.min.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     {% block content %}{% endblock %}
+    {% if user.is_authenticated %}
+        <p>You are logged in as {{ request.user }}. <a href="{% url 'logout' %}">Log Out</a>
+    {% endif %}
 </body>
 </html>
